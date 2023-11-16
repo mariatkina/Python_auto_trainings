@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 
-#1
+#1 заполнение форм на странице с помощью Selenium
 def firstFormTry(driver):
     try:
         driver.get("http://suninjuly.github.io/simple_form_find_task.html")
@@ -25,6 +25,7 @@ def firstFormTry(driver):
         time.sleep(10)
         driver.quit()
 
+#2 заполнение форм на странице с помощью Selenium с использованием PARTIAL_LINK_TEXT и math
 def secondTry(driver):
     try:
         driver.get("http://suninjuly.github.io/find_link_text")
@@ -44,6 +45,7 @@ def secondTry(driver):
         time.sleep(10)
         driver.quit()
 
+#3 заполнение форм на странице с помощью Selenium с использованием метода find_elements
 def thirdForm(driver):
     try:
         driver.get("http://suninjuly.github.io/huge_form.html")
@@ -57,6 +59,7 @@ def thirdForm(driver):
         time.sleep(10)
         driver.quit()
 
+#4 заполнение форм на странице с помощью Selenium с использованием XPATH
 def fourthForm(driver):
     try:
         driver.get("http://suninjuly.github.io/find_xpath_form")
@@ -74,6 +77,7 @@ def fourthForm(driver):
         time.sleep(10)
         driver.quit()
 
+#5 заполнение форм регистрации на странице с помощью Selenium с изменением адреса
 def regForm1(driver, str):
     try:
         driver.get(str)
@@ -91,12 +95,13 @@ def regForm1(driver, str):
     finally:
         time.sleep(2)
         driver.quit()
+formLink1 = "http://suninjuly.github.io/registration1.html"
+formLink2 = "http://suninjuly.github.io/registration2.html"
 
+# Реализация методов:
 firstFormTry(driver)
 secondTry(driver)
 thirdForm(driver)
 fourthForm(driver)
-
-formLink1 = "http://suninjuly.github.io/registration1.html"
-formLink2 = "http://suninjuly.github.io/registration2.html"
 regForm1(driver, formLink1)
+regForm1(driver, formLink2)
